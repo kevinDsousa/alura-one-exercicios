@@ -2,11 +2,13 @@
 
 <script>
     function calcularImc(nome, peso, altura) {
-        var peso = peso;
-        var altura = altura;
-        var imc = peso / (altura * altura);
-        document.write(`O indice de massa do ${nome} é de ${imc}`)
+        return peso / (altura * altura);
     }
 
-    calcularImc("kevin", 80, 1.80);
+    var nome = prompt('Qual é o seu nome:')
+    var altura = prompt('Informe a sua altura: ')
+    var peso = prompt('Informe seu peso: ')
+
+    var resultado = calcularImc(nome, altura, peso)
+    document.prompt(`O indice de massa do ${nome} é de ${resultado}`)
 </script>
