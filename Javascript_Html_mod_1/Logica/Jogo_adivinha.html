@@ -1,0 +1,17 @@
+<meta charset="UTF-8" />
+
+<script>
+    function mostra(frase) {
+        document.write(frase);
+    }
+
+    var numeroPensado = Math.round(Math.random(0, 10));
+    var chute = parseInt(prompt("Digite seu chute: "));
+
+    if(chute == numeroPensado) {
+        document.write("Você acertou")
+    }
+    else{
+        document.write("Você errou, numero pensado foi: " + numeroPensado)
+    }
+</script>
