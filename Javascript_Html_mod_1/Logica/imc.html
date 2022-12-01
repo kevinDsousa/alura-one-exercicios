@@ -10,5 +10,11 @@
     var peso = prompt('Informe seu peso: ')
 
     var resultado = calcularImc(nome, altura, peso)
-    document.prompt(`O indice de massa do ${nome} é de ${resultado}`)
+    if(resultado < 18.5)
+        document.write("Vocé esta abaixo do recomendado")
+    if(resultado > 35)
+        document.write("Vocé acima esta no recomendado")
+    if(resultado >= 18.5 && resultado <= 35)
+        document.write("Seu imc está dentro dos padrões")
+        
 </script>
