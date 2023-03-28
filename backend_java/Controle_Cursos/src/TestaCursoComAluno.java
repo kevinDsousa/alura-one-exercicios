@@ -1,4 +1,6 @@
-package br.com.alura;
+import java.util.Iterator;
+import java.util.Set;
+import java.util.Vector;
 
 public class TestaCursoComAluno {
 
@@ -20,9 +22,23 @@ public class TestaCursoComAluno {
 		javaColecoes.matricula(a3);
 		
 		System.out.println("Todos os alunos matriculados: ");
-		javaColecoes.getAlunos().forEach(aluno -> {
-			System.out.println(aluno);
-		});
+		
+		Set<Aluno> alunos = javaColecoes.getAlunos();
+		Iterator<Aluno> iterator= alunos.iterator();
+
+		iterator.hasNext();
+		iterator.next();
+		
+		while(iterator.hasNext()) {
+			Aluno proximo = iterator.next();
+			System.out.println(proximo);
+		}
+
+		Vector<Aluno> vetor = new Vector<>(); // desuso geralmente codigo legado
+
+		// javaColecoes.getAlunos().forEach(aluno -> {
+		// 	System.out.println(aluno);
+		// });
 		
 	}
 }
